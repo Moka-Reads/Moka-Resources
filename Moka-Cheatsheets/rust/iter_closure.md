@@ -119,7 +119,7 @@ where they take in a closure. To do so define a generic type where you will defi
 mentioned earlier. 
 
 ```rust 
-fn do_something<F: >(i: i32, closure: F) -> i32 
+fn do_something<F>(i: i32, closure: F) -> i32 
 where F: Fn(i32) -> i32{
     closure(i)
 }
