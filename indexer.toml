@@ -1,0 +1,8 @@
+readme = "README.md"
+article = "Moka-Articles"
+cheatsheet = "Moka-Cheatsheets"
+guide = "Moka-Guides"
+
+[readme_conf]
+header = "MoKa Resources"
+license_info = "Licensing information provided at our [website](https://mokareads.org/licenses)"
