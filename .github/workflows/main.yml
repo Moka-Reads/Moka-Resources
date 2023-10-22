@@ -1,8 +1,9 @@
 name: Run Mokares indexer 
+
 on: 
   push: 
     branches: [main]
-  permissions: write-all 
+permissions: write-all 
 
 jobs: 
   run-commit-push: 
