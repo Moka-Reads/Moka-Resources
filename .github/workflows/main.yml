@@ -1,0 +1,22 @@
+name: Run Mokares indexer 
+on: 
+  push: 
+    branches: [main]
+  permissions: write-all 
+
+jobs: 
+  run-commit-push: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with: 
+          toolchain: stable
+      - run: cargo install --git https://github.com/Moka-Reads/MokaRes.git 
+      - run: mokares build-indexer
+      - uses: ad-m/github-push-action@master
+        with: 
+          github_token: ${{secrets.GITHUB_TOKEN}}
+      
+            
